@@ -21,7 +21,7 @@ export default function Story() {
           <SectionTitle
             eyebrow="THE STORY"
             title="Built For The Misfits."
-            description="TRIQZY isn't just another PFP collection. It's a Genesis identity created for people who refuse to blend into the crowd."
+            description="TRIQZY isn&apos;t just another PFP collection. It&apos;s a Genesis identity created for people who refuse to blend into the crowd."
           />
         </Reveal>
 

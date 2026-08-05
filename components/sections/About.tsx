@@ -11,9 +11,7 @@ export default function About() {
       </h2>
 
       <div className="mx-auto max-w-7xl px-6">
-
         <div className="max-w-3xl">
-
           <span className="mb-6 inline-block uppercase tracking-[0.45em] text-sm text-[#C3261F]">
             THE STORY
           </span>
@@ -25,7 +23,6 @@ export default function About() {
           </h2>
 
           <div className="mt-10 space-y-7 text-xl leading-9 text-zinc-400">
-
             <p>
               TRIQZY isn&apos;t about fitting in.
             </p>
@@ -35,16 +32,13 @@ export default function About() {
             </p>
 
             <p>
-              Every artwork represents a different personality,
-              a different perspective and a different story.
-              Only <strong className="text-white">1111</strong> collectors
-              will ever become part of the Genesis chapter.
+              Every artwork represents a different personality, a different
+              perspective, and a different story. Only{" "}
+              <strong className="text-white">1111</strong> collectors will ever
+              become part of the Genesis chapter.
             </p>
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
