@@ -5,7 +5,6 @@ import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Loader from "@/components/ui/Loader";
 import Aurora from "@/components/ui/Aurora";
-import MouseGlow from "@/components/ui/MouseGlow";
 
 const geistSans = Geist({
   variable: "--font-geist",
@@ -18,32 +17,82 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TRIQZY | Genesis NFT Collection",
+  metadataBase: new URL("https://triqzy.vercel.app"),
+
+  title: {
+    default: "TRIQZY | Genesis NFT Collection",
+    template: "%s | TRIQZY",
+  },
+
   description:
-    "TRIQZY is a premium Genesis NFT collection built on Robinhood EVM for collectors, creators and digital culture.",
+    "TRIQZY is a premium Genesis NFT collection built for collectors, creators, and the culture.",
+
   keywords: [
     "TRIQZY",
     "NFT",
-    "Robinhood",
-    "Robinhood EVM",
+    "NFT Collection",
     "Genesis",
     "Web3",
-    "Collection",
+    "Ethereum",
+    "Digital Collectibles",
+    "Crypto",
+    "Robinhood",
   ],
-  metadataBase: new URL("https://triqzy.xyz"),
+
+  authors: [
+    {
+      name: "TRIQZY",
+    },
+  ],
+
+  creator: "TRIQZY",
+
+  publisher: "TRIQZY",
+
   openGraph: {
     title: "TRIQZY | Genesis NFT Collection",
+
     description:
-      "Own a piece of the Genesis collection built for the Robinhood ecosystem.",
+      "A premium Genesis NFT collection built for collectors, creators, and the culture.",
+
+    url: "https://triqzy.vercel.app",
+
+    siteName: "TRIQZY",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TRIQZY Genesis NFT Collection",
+      },
+    ],
+
+    locale: "en_US",
+
     type: "website",
-    images: ["/og-image.jpg"],
   },
+
   twitter: {
     card: "summary_large_image",
+
     title: "TRIQZY | Genesis NFT Collection",
+
     description:
-      "Own a piece of the Genesis collection built for the Robinhood ecosystem.",
-    images: ["/og-image.jpg"],
+      "A premium Genesis NFT collection built for collectors, creators, and the culture.",
+
+    images: ["/og-image.png"],
+  },
+
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -57,18 +106,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} bg-[#070707] text-white antialiased`}
       >
-        {/* Global Effects */}
         <Loader />
-        <Aurora />
-        <MouseGlow />
 
-        {/* Navigation */}
+        <Aurora />
+
         <Navbar />
 
-        {/* Website */}
-        <main className="relative z-10">
-          {children}
-        </main>
+        {children}
       </body>
     </html>
   );
