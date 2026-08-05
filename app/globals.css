@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+/* =========================
+   ROOT
+========================= */
+
+:root {
+  --bg: #070707;
+  --card: #111111;
+  --border: rgba(255, 255, 255, 0.06);
+  --green: #00c805;
+  --text: #ffffff;
+  --muted: #9ca3af;
+}
+
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* =========================
+   TEXT SELECTION
+========================= */
+
+::selection {
+  background: var(--green);
+  color: #000;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090909;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #16d20d;
+}
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+
+  background-size: 42px 42px;
+
+  opacity: .35;
+
+  z-index: -3;
+}
+
+/* =========================
+   NOISE
+========================= */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+
+  opacity: .035;
+
+  background-image:
+    radial-gradient(circle at 20% 20%, white 1px, transparent 1px),
+    radial-gradient(circle at 80% 70%, white 1px, transparent 1px),
+    radial-gradient(circle at 40% 90%, white 1px, transparent 1px);
+
+  background-size: 180px 180px;
+
+  z-index: -2;
+}
+
+/* =========================
+   UTILITIES
+========================= */
+
+.glass {
+  background: rgba(255,255,255,.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.06);
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.05);
+  border-radius: 28px;
+}
+
+.green-glow {
+  box-shadow: 0 0 80px rgba(0,200,5,.18);
+}
+
+.hover-card {
+  transition: all .35s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,200,5,.35);
+  box-shadow: 0 25px 80px rgba(0,200,5,.18);
+}
+
+.image-hover {
+  transition: transform .6s ease;
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-delay {
+  animation: float 7.5s ease-in-out infinite;
+}
+
+@keyframes slowFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-35px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-slow-float {
+  animation: slowFloat 12s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp .8s ease forwards;
+}
