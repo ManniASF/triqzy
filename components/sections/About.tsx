@@ -27,11 +27,11 @@ export default function About() {
           <div className="mt-10 space-y-7 text-xl leading-9 text-zinc-400">
 
             <p>
-              TRIQZY isn't about fitting in.
+              TRIQZY isn&apos;t about fitting in.
             </p>
 
             <p>
-              It's about collecting identity.
+              It&apos;s about collecting identity.
             </p>
 
             <p>
