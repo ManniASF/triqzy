@@ -7,7 +7,6 @@ import SectionTitle from "@/components/shared/SectionTitle";
 
 import TaskCard from "@/components/allowlist/TaskCard";
 import SubmissionForm from "@/components/allowlist/SubmissionForm";
-import AllowlistCounter from "@/components/allowlist/AllowlistCounter";
 
 export default function Allowlist() {
   const [completedTasks, setCompletedTasks] = useState(0);
@@ -15,35 +14,30 @@ export default function Allowlist() {
   return (
     <section
       id="allowlist"
-      className="relative py-32"
+      className="relative overflow-hidden py-32"
     >
-      {/* Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,200,5,0.08),transparent_65%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,#00C80510,transparent_70%)]" />
 
       <div className="relative mx-auto max-w-7xl px-6">
 
         <Reveal>
           <SectionTitle
-            eyebrow="GENESIS FCFS"
-            title="Join The 500 FCFS Allowlist"
-            description="Complete the required tasks below and submit your wallet to secure a chance at one of only 500 Genesis allowlist spots."
+            eyebrow="ALLOWLIST"
+            title="Join The Genesis Allowlist"
+            description="Complete every task below to unlock the allowlist submission form."
           />
         </Reveal>
 
-        <Reveal delay={0.1}>
-          <AllowlistCounter />
-        </Reveal>
+        <div className="mt-20 grid gap-10 lg:grid-cols-2">
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-2">
-
-          <Reveal delay={0.2}>
+          <Reveal>
             <TaskCard
               completedTasks={completedTasks}
               setCompletedTasks={setCompletedTasks}
             />
           </Reveal>
 
-          <Reveal delay={0.3}>
+          <Reveal delay={0.1}>
             <SubmissionForm
               completedTasks={completedTasks}
             />

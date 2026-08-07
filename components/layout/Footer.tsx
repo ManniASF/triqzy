@@ -10,16 +10,13 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative border-t border-white/5 py-24">
-
+    <footer className="border-t border-white/5 bg-[#070707] py-20">
       <Container>
-
         <div className="grid gap-16 lg:grid-cols-3">
 
           {/* Brand */}
 
           <div>
-
             <h2 className="text-4xl font-black tracking-[0.2em] text-white">
               TRIQZY
             </h2>
@@ -28,19 +25,16 @@ export default function Footer() {
               A premium Genesis NFT collection built for collectors,
               creators and digital culture on Robinhood EVM.
             </p>
-
           </div>
 
           {/* Navigation */}
 
           <div>
-
             <h3 className="text-lg font-bold text-white">
               Navigation
             </h3>
 
             <div className="mt-6 flex flex-col gap-4">
-
               {links.map((link) => (
                 <a
                   key={link.name}
@@ -50,15 +44,12 @@ export default function Footer() {
                   {link.name}
                 </a>
               ))}
-
             </div>
-
           </div>
 
-          {/* Social */}
+          {/* Community */}
 
           <div>
-
             <h3 className="text-lg font-bold text-white">
               Community
             </h3>
@@ -66,21 +57,22 @@ export default function Footer() {
             <div className="mt-6 flex gap-4">
 
               <a
-                href="#"
+                href="https://x.com/triqzy_nfts"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="rounded-full border border-white/10 px-5 py-3 transition hover:border-[#00C805] hover:text-[#00C805]"
               >
-                X
+                Follow on X
               </a>
 
               <a
                 href="#"
-                className="rounded-full border border-white/10 px-5 py-3 transition hover:border-[#00C805] hover:text-[#00C805]"
+                className="rounded-full border border-white/10 px-5 py-3 text-zinc-500 transition hover:border-[#00C805] hover:text-[#00C805]"
               >
                 Discord
               </a>
 
             </div>
-
           </div>
 
         </div>
@@ -88,9 +80,7 @@ export default function Footer() {
         <div className="mt-20 border-t border-white/5 pt-8 text-center text-sm text-zinc-500">
           © {new Date().getFullYear()} TRIQZY. All rights reserved.
         </div>
-
       </Container>
-
     </footer>
   );
 }
