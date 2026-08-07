@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { supabase } from "../../Lib-temp/supabase";
+import { supabase } from "../../Lib/supabase";
 
 const MAX_SPOTS = 500;
 
