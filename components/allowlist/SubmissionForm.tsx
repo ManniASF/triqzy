@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/Lib/supabase";
+import { supabase } from "@/Lib-temp/supabase";
 import SuccessModal from "./SuccessModal";
 
 type Props = {
